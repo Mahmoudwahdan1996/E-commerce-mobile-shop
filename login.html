@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About page</title>
+    <!-- bootstarp -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap icon  -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+
+    <!-- main css -->
+  </head>
+  <body>
+    <!-- nav bar -->
+    <header class="header" id="header">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#home">
+            <span class="fw-bold text-secondary"> Mobile Shop </span>
+          </a>
+          <button
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-nav"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="ms-3 d-md-none cartIcon">
+            <i class="bi bi-cart-fill fw-bold fs-2 text-light"></i>
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-end align-items-center"
+            id="main-nav"
+          >
+            <ul class="navbar-nav d-flex align-items-md-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="products.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+
+              <li class="nav-item" id="login-button">
+                <a class="nav-link active" aria-current="page" href="login.html"
+                  >Login</a
+                >
+              </li>
+
+              <li class="nav-item" id="register-button">
+                <a class="nav-link" href="register.html">Register</a>
+              </li>
+
+              <li class="nav-item" id="logout-button">
+                <a class="nav-link" href="#">Logout</a>
+              </li>
+
+              <li class="nav-item d-none d-md-inline">
+                <a class="nav-link fs-2 cartIcon " >
+                  <i class="bi bi-cart-fill fw-bold text-light"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- section login -->
+
+    <section class="login py-5" id="login">
+      <div class="w-75 my-5 mx-auto">
+        <h1 class="title my-2 text-center fs-1">Login</h1>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="offset-md-2 col-md-8 offset-md-2">
+            <form id="loginform">
+              <div
+                class="alert alert-warning alert-dismissible fade d-none"
+                id="alert"
+                role="alert"
+              >
+                <p class="alert-content" id="alert-content"></p>
+
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="name@example.com"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="password"
+                  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                />
+              </div>
+
+              <button
+                type="submit"
+                id="login"
+                class="btn btn-secondary btn-lg my-5"
+              >
+                Log In
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/navbar.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>
